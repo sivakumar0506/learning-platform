@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Roadmap</title>
+    <link rel="stylesheet" href="course.css">
+    <script src="timer.js"></script>
+    <style>
+        /* Add these styles to styles.css */
+.notes-section {
+    margin-top: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical; /* Allows vertical resizing */
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+</style> <!-- Add this line to include new styles -->
+</head>
+<body>
+    <div class="container roadmap html-roadmap">
+        <h1 style="margin-top: 600px;">HTML Roadmap</h1>
+
+        <div class="tree-wrapper">
+            <div class="tree">
+                <div class="node" id="basics-html">
+                    <span>Basics of HTML</span>
+                    <div class="branch">
+                        <div class="node">
+                            <span>HTML Tags</span>
+                        </div>
+                        <div class="node">
+                            <span>Attributes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="node">
+                    <span>HTML Forms</span>
+                    <div class="branch">
+                        <div class="node">
+                            <span>Form Elements</span>
+                        </div>
+                        <div class="node">
+                            <span>Form Validation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="node">
+                    <span>HTML5 Features</span>
+                    <div class="branch">
+                        <div class="node">
+                            <span>New Elements</span>
+                        </div>
+                        <div class="node">
+                            <span>APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="frontend.html" class="back-btn" style="margin-top:40px;">Back to Frontend Roadmap</a>
+
+        <!-- Modal -->
+<div id="htmlModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <a href="#" class="complete-btn">Complete</a>
+        <a href="flashcard.html" class="flashcards-btn">Flashcards✨</a>
+        <h2>HTML Resources</h2>
+        <ul class="resources-list" style="list-style-type: none; text-align: left;">
+            <li><strong>MDN Web Docs:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN HTML Documentation</a></li>
+            <li><strong>W3Schools:</strong> <a href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a></li>
+            <li><strong>HTML.com:</strong> <a href="https://html.com/">HTML.com Guide</a></li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- Notes Section -->
+        <div class="notes-section">
+            <h2 >MY PROJECT IDEAS!</h2>
+            <textarea id="notes" rows="10" placeholder="Type your notes here..."></textarea>
+            <button id="saveBtn">Save Project</button>
+            <button id="deleteBtn" style="background-color: orangered; margin-left: 50px;">Delete Project</button>
+        </div>
+    </div>
+    <script src="course.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Completion</title>
+    <link rel="stylesheet" href="timer.css">
+</head>
+<body>
+    <div class="container">
+        <div class="locker">
+            <img id="lockImage" src="lock.png" alt="Locked">
+            <img id="unlockImage" src="unlock.png" alt="Unlocked" class="hidden">
+        </div>
+        <button id="completionButton">
+            <span id="timer">10:00</span>
+        </button>
+        <div id="courseScenario" class="hidden">
+            <h2>Course Completed!</h2>
+            <p>Congratulations! You've successfully completed the course.</p>
+        </div>
+    </div>
+    <script src="timer.js"></script>
+</body>
+</html>

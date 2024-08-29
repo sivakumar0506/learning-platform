@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>RUZZ Dashboard</h2>
+            </div>
+            <img src="logo.jpg" alt="" >
+            <ul>
+                <li><a href="dashboard.html"  class="active"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                <li><a href="course.html"><i class="fa fa-users"></i> Courses</a></li>
+                <li><a href="cal.html"><i class="fa fa-book"></i>Habit Book</a></li>
+                <li><a href="resume.html"><i class="fa fa-vr-cardboard"></i>Auto Resume Updater</a></li>
+                <li><a href="corres.html"><i class="fa fa-cog"></i>Correspondence students</a></li>
+            </ul>
+            <div class="pro-section">
+                <button style="color: aliceblue;"><a href="login.html">Sign out</a></button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header>
+                <div class="breadcrumbs">
+                    <h3>Dashboard</h3>
+                    <p>Pages / Dashboard</p>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Type here..." style="border-radius: 20px;">
+                    <button>Search</button>
+                    <a href="#">Sign In</a>
+                </div>
+            </header>
+
+            <!-- Cards -->
+            <div class="cards">
+                <div class="card">
+                    <h4>Today's Course</h4>
+                    <p>Java</p>
+                </div>
+                <div class="card">
+                    <h4>Today's Users</h4>
+                    <p>2,300</p>
+                </div>
+                <div class="card">
+                    <h4>New Learners</h4>
+                    <p>+3,462</p>
+                </div>
+                <div class="card">
+                    <h4>Members Placed</h4>
+                    <p>103,430</p>
+                </div>
+            </div>
+
+            <!-- Charts & Info -->
+            <div class="charts">
+                <div class="chart-container" style="margin-right: 30px;">
+                    <h4>Active Users</h4>
+                    <canvas id="activeUsersChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h4>Sales Overview</h4>
+                    <canvas id="salesOverviewChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Project List -->
+            <div class="projects">
+                <h4>Projects</h4>
+                <table>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Members</th>
+                        <th>Budget</th>
+                        <th>Completion</th>
+                    </tr>
+                    <tr>
+                        <td>Soft UI XD Version</td>
+                        <td>Sivakumar</td>
+                        <td>$14,000</td>
+                        <td><div class="completion-bar"><div class="progress" style="width: 60%;"></div></div></td>
+                    </tr>
+                    <tr>
+                        <td>Add Progress Track</td>
+                        <td>SriGowtham</td>
+                        <td>$3,000</td>
+                        <td><div class="completion-bar"><div class="progress" style="width: 10%;"></div></div></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Course Roadmap -->
+            <div class="roadmap" >
+                <h4>Course Roadmap</h4>
+                <ul>
+                    <li>HTML & CSS <span>22 DEC 7:20 PM</span></li>
+                    <li>C++ <span>21 DEC 11 PM</span></li>
+                    <li>JavaScript <span>21 DEC 9:34 PM</span></li>
+                    <li>Java<span>20 DEC 2:20 AM</span></li>
+                    <li>Python <span>18 DEC 4:54 AM</span></li>
+                    <li>SQL <span>17 DEC</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

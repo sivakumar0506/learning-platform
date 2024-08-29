@@ -1,0 +1,218 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+    margin-bottom: 55vh;
+}
+/* Sidebar Styles */
+.sidebar {
+    width: 260px;
+    background-color:#f1f1f1;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .logo h2 {
+    margin-bottom: 0px;
+    color: #3c76f4;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    padding-top:5px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.sidebar ul li a.active, .sidebar ul li a:hover {
+    background:whitesmoke;
+    padding-top: 20px;
+    color:black;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar .pro-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.sidebar .pro-section button {
+    background: linear-gradient(90deg, #ff007f, #6a0dad); /* Pink to Violet Gradient */
+
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.sidebar .pro-section button:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header .breadcrumbs h3 {
+    margin: 0;
+    color: #3c76f4;
+}
+
+header .breadcrumbs p {
+    margin: 5px 0 0;
+    color: #999;
+}
+
+header .search {
+    display: flex;
+    align-items: center;
+}
+
+header .search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+header .search button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #ff007f;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+header .search a {
+    margin-left: 20px;
+    color: #ff007f;
+    text-decoration: none;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.cards .card {
+    background-color: #fff;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    width: 23%;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cards .card h4 {
+    margin: 0;
+    color: #ff007f;
+}
+
+.cards .card p {
+    margin: 10px 0 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.chart-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects, .roadmap {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.projects th, .projects td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.projects .completion-bar {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.projects .progress {
+    background: linear-gradient(90deg, #42c7e1, #0d3aad);
+    height: 10px;
+    border-radius: 10px;
+}
+
+.roadmap ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.roadmap ul li {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.roadmap ul li span {
+    color: #999;
+}

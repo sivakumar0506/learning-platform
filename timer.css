@@ -1,0 +1,122 @@
+body {
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ffcfdf, #d0e7ff); /* Soft gradient background */
+    overflow: hidden; /* Prevent scrolling during animation */
+    transition: background-color 2s ease-in-out; /* Smooth background color transition */
+}
+
+.container {
+    text-align: center;
+    position: relative; /* Ensure container is above background animation */
+    z-index: 1; /* Keep content above animated background */
+}
+
+.locker {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#lockImage,
+#unlockImage {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
+}
+
+#lockImage {
+    opacity: 1;
+}
+
+#unlockImage {
+    opacity: 0;
+    transform: scale(0.5); /* Start with smaller size */
+}
+
+.unlockAnimation {
+    opacity: 1;
+    transform: scale(1); /* Grow to original size */
+}
+
+#completionButton {
+    position: relative;
+    padding: 20px;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(76, 175, 80, 0.8); /* Slightly opaque green */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    width: 300px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    background: linear-gradient(45deg, #4CAF50, #8BC34A); /* Gradient background */
+    background-size: 200% 200%; /* For animation effect */
+    animation: shimmer 1.5s infinite; /* Shimmer effect */
+}
+
+#completionButton:hover {
+    background-color: rgba(76, 175, 80, 1); /* Fully opaque green on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+#completionButton:active {
+    transform: scale(0.95); /* Slightly shrink button when clicked */
+}
+
+#timer {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff; /* Timer text color */
+    animation: pulse 1s infinite; /* Pulse animation for the timer */
+}
+
+#courseScenario {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4CAF50; /* Green text */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation for the completion message */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Add this class */
+.background-animate {
+    animation: backgroundAnimation 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+@keyframes backgroundAnimation {
+    0% { background-color: #FFEB3B; } /* Classic Yellow */
+    25% { background-color: #F44336; } /* Classic Red */
+    50% { background-color: #2196F3; } /* Classic Blue */
+    75% { background-color: #4CAF50; } /* Classic Green */
+    100% { background-color: #FFEB3B; } /* Classic Yellow */
+}
